@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <link rel="stylesheet" href="light.css" id="theme">
+</head>
+
+<body>
+    <div class="bulb">
+        <div class="bulb-circle"></div>
+        <div class="bulb-pill"></div>
+        <div class="bulb-pill"></div>
+        <div class="bulb-pill"></div>
+    </div>
+    <div class="btn-wrapper">
+        <div class="outter" id="btn">
+            <div class="inner" id="circle">
+                <div class="v--pill"></div>
+                <div class="h--pill"></div>
+            </div>
+            <p class="label">ON</p>
+        </div>
+    </div>
+    <script>
+        const btn = document.getElementById("btn");
+        const circle = document.getElementById("circle");
+        const theme = document.getElementById("theme");
+        const label = document.getElementsByClassName("label")[0];
+
+        let state = false;
+        btn.addEventListener("click", () => {
+            if (state) {
+                circle.style.transform = "translateX(0%) rotate(-90deg)";
+                theme.href = "light.css";
+                label.innerHTML = "ON";
+                state = !state;
+            } else {
+                circle.style.transform = "translateX(190%) rotate(90deg)";
+                theme.href = "dark.css";
+                label.innerHTML = "OFF";
+                state = !state;
+            }
+        })
+
+        btn.addEventListener("mouseover", () => {
+            circle.style.width = "35px";
+            circle.style.height = "35px";
+            btn.style.width = "130px";
+            btn.style.height = "45px";
+            if (state) {
+                circle.style.transform = "translateX(190%) rotate(90deg)";
+            }
+        })
+
+        btn.addEventListener("mouseout", () => {
+            circle.style.width = "30px";
+            circle.style.height = "30px";
+            btn.style.width = "100px";
+            btn.style.height = "40px";
+            if (state) {
+                circle.style.transform = "translateX(165%) rotate(90deg)";
+            }
+        })
+    </script>
+</body>
+
+</html>

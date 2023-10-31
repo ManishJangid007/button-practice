@@ -1,0 +1,96 @@
+* {
+    transition: 0.3s;
+}
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-wrapper {
+    height: 80px;
+    width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outter {
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: black;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.inner {
+    background-color: transparent;
+    border: 4px dashed white;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.v--pill {
+    width: 4px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: white;
+    position: absolute;
+}
+
+.h--pill {
+    width: 20px;
+    height: 4px;
+    border-radius: 20px;
+    background-color: white;
+    position: absolute;
+}
+
+.label {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.bulb {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bulb-circle {
+    height: 50%;
+    width: 50%;
+    margin-bottom: 5px;
+    border-radius: 100%;
+    border: 8px solid rgb(70, 70, 70);
+}
+
+.bulb-pill {
+    width: 30%;
+    height: 13px;
+    background-color: rgb(70, 70, 70);
+    margin: 3px 0px;
+    border-radius: 20px;
+}
