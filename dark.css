@@ -35,7 +35,7 @@ body::-webkit-scrollbar {
 
 .inner {
     background-color: transparent;
-    border: 4px dashed black;
+    border: 4px double black;
     width: 30px;
     height: 30px;
     border-radius: 100%;
